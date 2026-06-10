@@ -19,20 +19,27 @@ export default function Promo() {
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
             src="/images/spiral-circles.jpg"
-            alt="Abstract spiral circles"
+            alt="Abstract background"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/60" />
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
-      </h3>
-
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
+      <p className="absolute top-12 right-6 text-white/60 uppercase z-10 text-xs tracking-[0.3em]">
+        Regent · The Mandate
       </p>
+
+      <div className="absolute bottom-12 right-6 z-10 text-right max-w-2xl">
+        <p className="text-white/50 text-xs uppercase tracking-widest mb-4">Замок</p>
+        <p className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-light">
+          Два титановых клапана.<br />
+          Закрываются со звуком<br />
+          захлопывающейся двери<br />
+          <span className="italic text-neutral-400">Bentley.</span>
+        </p>
+        <p className="text-white/50 text-sm mt-6 tracking-wider uppercase">Глухой. Басистый. «Thump».</p>
+      </div>
     </div>
   );
 }
