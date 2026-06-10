@@ -1,4 +1,8 @@
-export default function Footer() {
+interface FooterProps {
+  onOrder: () => void;
+}
+
+export default function Footer({ onOrder }: FooterProps) {
   return (
     <div
       className="relative h-[400px] sm:h-[600px] lg:h-[800px] max-h-[800px]"
@@ -16,9 +20,9 @@ export default function Footer() {
                 <a href="#features" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">
                   Технологии
                 </a>
-                <a href="#order" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">
+                <button onClick={onOrder} className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base text-left cursor-pointer">
                   Заказать
-                </a>
+                </button>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-500 text-xs tracking-widest">Regent</h3>

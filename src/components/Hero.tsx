@@ -1,7 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  onOrder: () => void;
+}
+
+export default function Hero({ onOrder }: HeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -38,7 +42,7 @@ export default function Hero() {
           Норвежская кожа. Кевларовые швы. Титановые клапаны.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-white text-black px-8 py-3 text-sm uppercase tracking-widest font-medium hover:bg-neutral-200 transition-colors duration-300 cursor-pointer">
+          <button onClick={onOrder} className="bg-white text-black px-8 py-3 text-sm uppercase tracking-widest font-medium hover:bg-neutral-200 transition-colors duration-300 cursor-pointer">
             Заказать — €4 200
           </button>
           <button className="border border-white/50 text-white px-8 py-3 text-sm uppercase tracking-widest font-light hover:border-white transition-colors duration-300 cursor-pointer">
